@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.component.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<body class="bg-container">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="detailes-card">
+      <h1>Get In Touch</h1>
+      <form>
+        <div class="input-container">
+          <input type="text" #fn class="content" placeholder="First Name" >
+          <input type="text" #ln class="content left" placeholder="Last Name" >
+        </div>
+        <div class="input-container">
+          <input type="email" #em class="content" placeholder="Email">
+          <input type="number" #p class=" content left" placeholder="Phone">
+        </div>
+
+        <div class="input-container">
+
+          <input type="address" #add class="form-control content"  placeholder="Address">
+        </div>
+        <div class="input-container">
+
+          <textarea placeholder="Text Your Message Here" class="form-control"></textarea>
+        </div>
+        <div class="button-card">
+          <button class="btn btn-primary" type="submit" (click)="getValue(fn.value,ln.value,em.value,p.value,add.value)">Submit</button>
+        </div>
+        <br>
+        <div>
+          <p>Full Name : {{first}} {{last}}</p>
+          <p>Email Address : {{email}}</p>
+          
+        </div>
+     </form>
+   </div>
+ </div>
+</body>
+</html>
